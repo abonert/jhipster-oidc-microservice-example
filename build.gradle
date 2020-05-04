@@ -184,6 +184,7 @@ dependencies {
     implementation "javax.cache:cache-api"
     implementation "commons-codec:commons-codec"
     implementation "org.apache.commons:commons-lang3"
+    implementation "org.apache.commons:commons-collections4:${commons_collection_version}"
     implementation "commons-io:commons-io"
     implementation "javax.transaction:javax.transaction-api"
     implementation "org.ehcache:ehcache"
@@ -222,6 +223,10 @@ dependencies {
     implementation "org.mapstruct:mapstruct:${mapstruct_version}"
     annotationProcessor "org.mapstruct:mapstruct-processor:${mapstruct_version}"
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor:${spring_boot_version}"
+    implementation "org.projectlombok:lombok:${lombok_version}"
+    annotationProcessor "org.projectlombok:lombok:${lombok_version}"
+    testImplementation "org.projectlombok:lombok:${lombok_version}"
+    testAnnotationProcessor "org.projectlombok:lombok:${lombok_version}"
     testImplementation ("org.springframework.boot:spring-boot-starter-test") {
         exclude group: "org.junit.vintage", module: "junit-vintage-engine"
     }
